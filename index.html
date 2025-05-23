@@ -1,9 +1,89 @@
-<html><head>
-  <meta name="google-adsense-account" content="ca-pub-5004473692590153">
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5004473692590153"
-     crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Our Colorful Page!</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css"> <!-- BS 3.4.1 -->
+    <link rel="stylesheet" href="css/custom.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  Hello, World!
+
+    <!-- Navigation Bar (Bootstrap 3) -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-main" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">MyWebsite</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse-main">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1>Welcome to Our Awesome Website!</h1>
+            <p class="lead">A fresh, colorful, and responsive experience just for you.</p>
+            <p><a href="#contact" class="btn btn-primary btn-lg" role="button">Get in Touch</a></p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="page-header text-center">
+                 <h2>About Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <p>We are dedicated to providing the best experience. Our website is built with modern technologies to ensure it's fast, reliable, and beautiful on all devices. We believe in the power of simplicity and color to create engaging user experiences.</p>
+                </div>
+                <div class="col-md-6 text-center">
+                     <img src="images/concert.jpg" alt="Creative Process" class="img-responsive img-rounded">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="page-header text-center">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <p class="lead">Have questions or want to start a project? We'd love to hear from you!</p>
+                    <p>Email us at: <a href="mailto:info@example.com">info@example.com</a> or call us at <strong>(123) 456-7890</strong>.</p>
+                    <p><a href="mailto:info@example.com" class="btn btn-success btn-lg" role="button">Send an Email</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+        <div class="container">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> MyWebsite. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 3 JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
 </body>
 </html>

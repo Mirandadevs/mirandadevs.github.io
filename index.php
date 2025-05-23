@@ -82,7 +82,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                	<span class="glyphicon glyphicon-star" style="font-size: 50px"></span><span class="glyphicon glyphicon-star" style="font-size: 50px"></span><span class="glyphicon glyphicon-star" style="font-size: 50px"></span><span class="glyphicon glyphicon-star" style="font-size: 50px"></span><span class="glyphicon glyphicon-star" style="font-size: 50px"></span>
+                	<span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span><span class="glyphicon glyphicon-star"></span>
                     <h2 class="section-heading">5 Stars</h2>
                     <p class="text-light">Self Help app is one of the anonymous Recovery readings for Android</p>
                 </div>

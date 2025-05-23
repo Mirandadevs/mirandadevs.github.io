@@ -1,0 +1,195 @@
+/* --- Global Styles --- */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f4f7f6; /* Light grayish-cyan for overall background */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600; /* Slightly bolder headings */
+}
+
+a {
+    color: #2a9d8f; /* Tealish blue for links */
+}
+
+a:hover, a:focus {
+    color: #227c70; /* Darker tealish blue on hover/focus */
+    text-decoration: none; /* Remove underline on hover for a cleaner look */
+}
+
+/* Section Padding */
+.hero-section, .about-section, .contact-section, .footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+/* --- Navigation Bar --- */
+.navbar-default {
+    background-color: #ffffff; /* White navbar */
+    border-color: #e7e7e7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.navbar-default .navbar-brand {
+    color: #2a9d8f; /* Tealish blue for brand */
+    font-weight: 700;
+}
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #227c70;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #555;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #2a9d8f;
+}
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: #2a9d8f; /* Active link with tealish blue background */
+}
+
+.navbar-default .navbar-toggle {
+    border-color: #ddd;
+}
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #888;
+}
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
+    background-color: #ddd;
+}
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(135deg, #2a9d8f 0%, #2c7a7b 100%); /* Teal gradient */
+    color: #ffffff;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hero-section .lead {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+    background-color: #e76f51; /* Coral accent for button */
+    border-color: #e76f51;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.hero-section .btn-primary:hover,
+.hero-section .btn-primary:focus {
+    background-color: #d85a3e; /* Darker coral */
+    border-color: #d85a3e;
+}
+
+/* --- About Section --- */
+.about-section {
+    background-color: #ffffff; /* White background */
+}
+
+.page-header { /* Bootstrap 3 class */
+    border-bottom: 1px solid #eee;
+    margin-top: 0; /* Adjusted from BS default */
+    padding-bottom: 15px; /* More space after header */
+    margin-bottom: 40px; /* Space before content */
+}
+
+.page-header h2 {
+    color: #2a9d8f; /* Tealish blue for section titles */
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.about-section img.img-responsive {
+    border: 5px solid #e7e7e7; /* Subtle border for image */
+    margin-top: 20px; /* Space if text is shorter */
+}
+@media (min-width: 992px) { /* md screens and up */
+    .about-section img.img-responsive {
+        margin-top: 0; /* Align top with text on larger screens */
+    }
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    background-color: #e9ecef; /* Light gray background */
+    text-align: center;
+}
+
+.contact-section .lead {
+    margin-bottom: 30px;
+    font-size: 20px;
+}
+
+.contact-section .btn-success {
+    background-color: #fca311; /* Bright yellow/orange for contact button */
+    border-color: #fca311;
+    color: #333; /* Dark text for yellow button */
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-section .btn-success:hover,
+.contact-section .btn-success:focus {
+    background-color: #e89200; /* Darker yellow/orange */
+    border-color: #e89200;
+    color: #333;
+}
+
+/* --- Footer --- */
+.footer {
+    background-color: #343a40; /* Dark footer */
+    color: #adb5bd; /* Light gray text */
+    text-align: center;
+}
+
+.footer p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 767px) { /* Extra small devices (phones, less than 768px) */
+    .hero-section h1 {
+        font-size: 36px; /* Reduce hero heading size on small screens */
+    }
+
+    .hero-section .lead {
+        font-size: 18px; /* Reduce lead text size */
+    }
+
+    .hero-section .btn-primary,
+    .contact-section .btn-success {
+        padding: 10px 20px; /* Adjust button padding */
+        font-size: 16px;
+    }
+
+    .page-header h2 {
+        font-size: 28px; /* Reduce section heading size */
+    }
+
+    /* Adjust section padding for smaller screens */
+    .hero-section, .about-section, .contact-section, .footer {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}
