@@ -84,7 +84,24 @@ header .header-content .header-content-inner p {
     font-weight: 400;
 }
 
+.btn-icon {
+    display: inline-block;
+    width: 1.1em;
+    height: 1.1em;
+    vertical-align: -0.15em;
+    margin-right: 8px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.btn-icon-apple {
+    width: 0.9em;
+}
+
 .hero-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     margin: 10px 8px 0;
 }
 
@@ -223,9 +240,138 @@ header .header-content .header-content-inner p {
 }
 
 .app-card-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
     flex: 1 1 auto;
     padding: 12px 16px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.app-featured-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 38px auto 0;
+    padding: 36px 40px;
+    border: 2px solid #b7d879;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 16px 36px rgba(29, 42, 17, 0.08);
+    text-align: left;
+}
+
+.app-featured-content {
+    flex: 1 1 58%;
+}
+
+.app-featured-content h3 {
+    margin: 10px 0 14px;
+    color: #293212;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.app-featured-content p {
+    color: #52606a;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.app-featured-content .app-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+    padding-top: 0;
+}
+
+.app-featured-content .app-card-actions .btn {
+    flex: 0 1 auto;
+    padding: 12px 24px;
+    font-size: 14px;
+    border-radius: 8px;
+}
+
+.app-featured-qr {
+    flex: 0 0 auto;
+}
+
+.qr-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 24px;
+    background: #fbfdf8;
+    border: 1px solid #dce8ca;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.qr-wrapper .qr-image {
+    width: 160px;
+    height: 160px;
+    padding: 8px;
+    background: #fff;
+    border: 1px solid #e5ecd9;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.qr-wrapper a:hover .qr-image,
+.qr-wrapper a:focus .qr-image {
+    transform: scale(1.03);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+.qr-wrapper .scan-text {
+    margin: 12px 0 6px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #52632a;
+    letter-spacing: 0.02em;
+}
+
+.qr-links {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-size: 12px;
+}
+
+.content-3 .qr-links .glyphicon {
+    font-size: 13px !important;
+    font-weight: 400 !important;
+    vertical-align: -1px;
+    margin-right: 3px;
+}
+
+.qr-action-link {
+    color: #405820;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.qr-action-link:hover,
+.qr-action-link:focus {
+    color: #2b4010;
+    text-decoration: underline;
+}
+
+.qr-separator {
+    color: #adb5bd;
+}
+
+.app-grid-secondary {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-top: 24px;
 }
 
 .btn-outline {
@@ -341,9 +487,33 @@ header .header-content .header-content-inner p {
     margin-bottom: 5px;
 }
 
+@media(max-width:991px) {
+    .app-featured-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 24px;
+    }
+
+    .app-featured-content .app-card-actions {
+        justify-content: center;
+    }
+
+    .app-grid-secondary {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media(max-width:767px) {
     .hero-cta .btn {
         width: min(100%, 340px);
+    }
+
+    .app-featured-content h3 {
+        font-size: 24px;
+    }
+
+    .app-featured-content .app-card-actions .btn {
+        width: 100%;
     }
 
     .app-grid {
