@@ -784,3 +784,230 @@ img::-moz-selection {
 .bg-primary {
     background-color: yellowgreen;
 }
+
+/* Promo & Discount Styles */
+.hero-offer-banner {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 26px;
+    padding: 12px 22px;
+    background: rgba(18, 24, 12, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(183, 216, 121, 0.45);
+    border-radius: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+@media(min-width: 768px) {
+    .hero-offer-banner {
+        flex-direction: row;
+        gap: 14px;
+    }
+}
+
+.hero-offer-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-offer-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 10px;
+    background: #d9534f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(217, 83, 79, 0.4);
+}
+
+.hero-offer-tag .glyphicon {
+    font-size: 10px;
+}
+
+.hero-offer-desc {
+    color: #f0f7e8;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.hero-offer-links {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-offer-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 16px;
+    background: #ffffff;
+    color: #1a220d !important;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: none;
+    border-radius: 20px;
+    text-decoration: none !important;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-offer-btn:hover,
+.hero-offer-btn:focus {
+    background: #eef7de;
+    color: #111 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 14px rgba(0, 0, 0, 0.3);
+}
+
+.hero-offer-btn .btn-icon-apple {
+    width: 0.85em;
+    height: 0.85em;
+    margin-right: 0;
+    fill: #000;
+}
+
+.hero-offer-btn .code-pill {
+    background: #253314;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 0.05em;
+}
+
+.hero-offer-btn:hover .code-pill {
+    background: #000;
+}
+
+/* Featured Section Discount Callout */
+.featured-discount-box {
+    margin: 20px 0 24px;
+    padding: 18px 22px;
+    background: linear-gradient(135deg, #fbfdf7 0%, #f1f8e4 100%);
+    border: 1.5px dashed #88b733;
+    border-radius: 14px;
+    text-align: left;
+}
+
+.discount-header-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin-bottom: 6px;
+}
+
+.discount-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #d9534f;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    border-radius: 12px;
+    text-transform: uppercase;
+}
+
+.discount-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #243011;
+}
+
+.discount-limit {
+    font-size: 12px;
+    color: #556c32;
+    font-weight: 600;
+}
+
+.discount-help {
+    margin: 4px 0 14px !important;
+    font-size: 13.5px !important;
+    color: #4a5c32 !important;
+    line-height: 1.45 !important;
+}
+
+.discount-buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.btn-discount {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    padding: 11px 18px;
+    background: #000000;
+    color: #fff !important;
+    border: 1px solid #000;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: none;
+    text-decoration: none !important;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-discount:hover,
+.btn-discount:focus {
+    background: #272727;
+    border-color: #272727;
+    color: #fff !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-discount .code-pill {
+    background: rgba(255, 255, 255, 0.22);
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-family: Menlo, Monaco, Consolas, monospace;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.btn-discount .discount-pct {
+    color: #a4dd39;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+@media(max-width: 767px) {
+    .hero-offer-banner {
+        width: 100%;
+        max-width: 360px;
+        border-radius: 20px;
+        padding: 14px 16px;
+    }
+
+    .hero-offer-links {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .hero-offer-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .discount-buttons-row .btn-discount {
+        width: 100%;
+    }
+}

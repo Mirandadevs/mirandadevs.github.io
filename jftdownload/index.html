@@ -95,15 +95,69 @@
             background-color: #f1f3f4;
             transform: translateY(-1px);
         }
-        .scan-text {
+        .discount-section {
+            margin-top: 1.5rem;
+            padding: 1.25rem;
+            background: #fbfdf7;
+            border: 1.5px dashed #88b733;
+            border-radius: 14px;
+            text-align: center;
+        }
+        .discount-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+        .discount-tag {
+            background: #d9534f;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 2px 8px;
+            border-radius: 10px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+        }
+        .discount-title {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #243011;
+        }
+        .discount-limit {
+            font-size: 0.8rem;
+            color: #556c32;
+            margin: 4px 0 12px;
+            font-weight: 500;
+        }
+        .discount-btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .btn-discount {
+            background-color: #1d1d1f;
+            color: white;
+            padding: 11px 16px;
+            border-radius: 8px;
             font-size: 0.9rem;
-            margin-top: 1rem;
-            color: #6e6e73;
+        }
+        .btn-discount:hover {
+            background-color: #333;
+            color: white;
+            transform: translateY(-1px);
         }
     </style>
     <script>
         function redirect() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+            var urlParams = new URLSearchParams(window.location.search);
+            var code = urlParams.get('code');
+            if (code && (code.toUpperCase() === 'NA26' || code.toUpperCase() === 'NA27')) {
+                window.location.href = "https://apps.apple.com/redeem/?code=" + encodeURIComponent(code.toUpperCase()) + "&ctx=offercodes&id=6759349113";
+                return;
+            }
 
             // iOS detection
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
@@ -150,6 +204,24 @@
                 <svg viewBox="0 0 512 512" fill="currentColor"><path d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-10.3 18-28.5-1.2-40.8zM325.3 277.7l60.1 60.1L104.6 499l220.7-221.3z"/></svg>
                 Google Play NA AA
             </a>
+        </div>
+
+        <div class="discount-section">
+            <div class="discount-header">
+                <span class="discount-tag">70% OFF</span>
+                <span class="discount-title">iOS Full Version</span>
+            </div>
+            <p class="discount-limit">Redeem with Apple offer codes</p>
+            <div class="discount-btn-group">
+                <a href="https://apps.apple.com/redeem/?code=NA26&ctx=offercodes&id=6759349113" class="btn btn-discount">
+                    <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.1 24.5-.7 35.3-15.5 60.7-15.5 25.1 0 34.9 15.5 60.7 14.9 49.3-.8 91.2-83.3 104-121.3-102.3-42.6-92.3-169.2 8.1-189.2zm-64.3-132.3c24.3-29.3 40.5-69.8 35.8-110.1-34.4 1.4-76.1 23.1-100.8 51.6-21.3 24.1-39.7 66-33.8 105 38.3 3 76.5-19.1 98.8-46.5z"/></svg>
+                    Redeem Code <strong>NA26</strong>
+                </a>
+                <a href="https://apps.apple.com/redeem/?code=NA27&ctx=offercodes&id=6759349113" class="btn btn-discount">
+                    <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.1 24.5-.7 35.3-15.5 60.7-15.5 25.1 0 34.9 15.5 60.7 14.9 49.3-.8 91.2-83.3 104-121.3-102.3-42.6-92.3-169.2 8.1-189.2zm-64.3-132.3c24.3-29.3 40.5-69.8 35.8-110.1-34.4 1.4-76.1 23.1-100.8 51.6-21.3 24.1-39.7 66-33.8 105 38.3 3 76.5-19.1 98.8-46.5z"/></svg>
+                    Redeem Code <strong>NA27</strong>
+                </a>
+            </div>
         </div>
     </div>
 </body>
